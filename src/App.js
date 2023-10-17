@@ -10,6 +10,10 @@ import Experience from './components/Experience';
 import Help from './components/Help';
 import PageNotFound from './components/PageNotFound';
 
+import GraphicDesign from './components/skills/GraphicDesign';
+import WebDevelopment from './components/skills/WebDevelopment';
+import DataEncoding from './components/skills/DataEncoding';
+
 
 class App extends React.Component {
     render(){
@@ -18,7 +22,12 @@ class App extends React.Component {
                 <Header />
                 <Routes>
                     <Route path='/' element={<Home />} />
-                    <Route path='skills' element={<Skills />} />
+                    <Route path='skills' element={<Skills />}>
+                        <Route index element={<GraphicDesign />} />
+                        <Route path='graphic-design' element={<GraphicDesign />} />
+                        <Route path='web-development' element={<WebDevelopment />} />
+                        <Route path='data-encoding' element={<DataEncoding />} />
+                    </Route>
                     <Route path='experience' element={<Experience />} />
                     <Route path='help' element={<Help />} />
                     <Route path='*' element={<PageNotFound />} />
