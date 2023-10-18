@@ -8,6 +8,13 @@ import {BsFillHddNetworkFill} from 'react-icons/bs'
 
 
 class SideBar extends React.Component {
+    activeLinkStyle = ({isActive}) => {
+        return {
+            fontWeight: isActive ? "bold" : "normal",
+            color: isActive ? "rgb(20, 122, 169)" : "rgba(187, 187, 216, 0.916)",
+            borderBottom: isActive ? "2px solid rgb(20, 122, 169)" : "none",
+        }
+    }
     render(){
         return (
             <div className="skill-side-bar">
@@ -15,13 +22,13 @@ class SideBar extends React.Component {
                 <img className="cos-img" src={cos} />
                 <ul>
                     <li>
-                        <NavLink to='programming' className='link'><BsFillFileCodeFill />Programming</NavLink>
+                        <NavLink to='programming' className='link' style={this.activeLinkStyle}><BsFillFileCodeFill />Programming</NavLink>
                     </li>
                     <li>
-                        <NavLink to='design' className='link'><IoLogoDesignernews />Design</NavLink>
+                        <NavLink to='design' className='link' style={this.activeLinkStyle}><IoLogoDesignernews />Design</NavLink>
                     </li>
                     <li>
-                        <NavLink to='networking' className='link'><BsFillHddNetworkFill />Networking</NavLink>
+                        <NavLink to='networking' className='link' style={this.activeLinkStyle}><BsFillHddNetworkFill />Networking</NavLink>
                     </li>
                 </ul>
             </div>
