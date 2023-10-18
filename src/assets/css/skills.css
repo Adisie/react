@@ -1,0 +1,38 @@
+.skills-components {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.skill-side-bar {
+    height: 100%;
+    width: 100%;
+    background: rgba(127, 126, 126, 0.368);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+}
+
+.skill-side-bar h3 {
+    padding: 7px;
+    color: rgba(188, 188, 226, 0.826);
+}
+
+.skill-side-bar .cos-img {
+    width: 100%;
+    height: 250px;
+    border-radius: 5px;
+}
+
+.skill-side-bar ul li {
+    list-style: none;
+    margin-top: 12px;
+}
+
+
+.skill-side-bar ul li .link {
+    text-decoration: none;
+    color: rgba(189, 189, 234, 0.866);
+}
