@@ -1,0 +1,59 @@
+.home-component {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1,h3 {
+        color: $primary-color;
+        padding: 12px;
+        font-style: italic;
+    }
+
+    p {
+        width: 65%;
+        margin: 0 auto;
+        padding: 42px;
+        background: rgba(0, 0, 0, 0.596);
+        margin: 12px;
+        border-radius: 5px;
+        color: $primary-color;
+    }
+
+    .button-container {
+        button {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1rem;
+            color: $primary-color;
+            background: none;
+            padding: 5px 18px;
+            border: 2px solid $secondary-color;
+            border-radius: 12px;
+            cursor: pointer;
+            margin: 9px;
+            position: relative;
+            z-index: 3;
+
+            span {
+                width: 0;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                border-radius: 12px;
+                background: $secondary-color;
+                z-index: -3;
+                transition: 1.5s;
+            }
+            &:hover {
+                border: none;
+                span {
+                    width: 100%;
+                }
+            }
+    
+        }
+    }
+}

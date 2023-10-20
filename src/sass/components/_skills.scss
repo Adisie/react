@@ -1,0 +1,55 @@
+
+
+.skill-component {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 12px;
+
+    .sidebar-container {
+        width: 100%;
+        height: 100%;
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .informative-image {
+            width: 85%;
+            margin: 0 auto;
+            border-radius: 12px;
+            height: 150px;
+        }
+    }
+
+    ul {
+        padding: 32px;
+
+        li {
+            list-style: none;
+            margin: 12px;
+            padding: 3px;
+            border-bottom: 2px solid $secondary-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 1s;
+
+            &:hover {
+                margin-left: 18px;
+            }
+
+            .link {
+                font-size: 1.1rem;
+                color: $primary-color;
+                text-decoration: none;
+
+                .icon {
+                    font-size: 1.5rem;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
