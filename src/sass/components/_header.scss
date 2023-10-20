@@ -1,0 +1,52 @@
+header {
+    width: 100%;
+    height: 100%;
+    padding: 5px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .site-logo {
+        text-decoration: none;
+        font-size: 1.3rem;
+        color: $primary-color;
+        font-family: cursive;
+        font-style: italic;
+        font-weight: bolder;
+    }
+
+    .navigation {
+        .link {
+            display: inline-block;
+            margin-left: 12px;
+            text-decoration: none;
+            color: $primary-color;
+            position: relative;
+            &::after {
+                content: '';
+                width: 0;
+                height: 3px;
+                border-radius: 5px;
+                background: $secondary-color;
+                position: absolute;
+                left: 0;
+                bottom: -3px;
+                transition: 1s;
+            }
+            &:hover::after {
+                width: 100%;
+            }
+            .icon {
+                font-size: 1.2rem;
+                margin-right: 5px;
+            }
+        }
+    }
+
+    .user-profile-img {
+        width: 38px;
+        height: 32px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+}
