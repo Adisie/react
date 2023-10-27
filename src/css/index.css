@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.807), rgba(0, 0, 0, 0.716)), url("D:/development/react-js/react-dev/src/assets/background-33.jpg");
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  grid-template-rows: 50px 1fr 50px;
+}
+
+header {
+  width: 100%;
+  height: 100%;
+  padding: 3px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .site-logo {
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: bolder;
+  font-family: cursive;
+  font-style: italic;
+  color: rgba(204, 204, 241, 0.75);
+}
+header .navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .navigation ul li {
+  display: inline-block;
+  list-style: none;
+  margin-right: 12px;
+  position: relative;
+}
+header .navigation ul li::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  border-radius: 7px;
+  background-color: rgb(50, 109, 157);
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  transition: 1s;
+}
+header .navigation ul li:hover::after {
+  width: 100%;
+}
+header .navigation ul li .link {
+  text-decoration: none;
+  color: rgba(204, 204, 241, 0.75);
+}
+header .navigation .user-profile-img {
+  width: 38px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+}
