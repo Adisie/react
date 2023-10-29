@@ -1,0 +1,64 @@
+header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px 12px;
+    background: rgb(27, 91, 134);
+    box-shadow: 0px 2px 3px black;
+
+    .site-logo {
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-family: cursive;
+        font-weight: 900;
+        font-style: italic;
+        color: rgba(255, 255, 255, 0.805);
+    }
+
+    .navigation {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        ul {
+            list-style: none;
+            li {
+                display: inline-block;
+                margin-right: 12px;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    width: 0;
+                    height: 3px;
+                    border-radius: 5px;
+                    background: rgba(255, 255, 255, 0.896);
+                    position: absolute;
+                    left: 0;
+                    bottom: -3px;
+                    transition: 1s;
+                }
+
+                &:hover::after {
+                    width: 100%;
+                }
+
+                .link {
+                    text-decoration: none;
+                    color: rgba(255, 255, 255, 0.896);
+                    font-family: 'Times New Roman', Times, serif;
+                    transition: 1s;
+                }
+            }
+        }
+
+        .user-profile-img {
+            width: 38px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    }
+}
