@@ -9,9 +9,13 @@ class ThemeContextProvider extends Component {
         light: {hbg:'rgb(179, 179, 179)',htxt:'rgb(38, 38, 38)',cbg:'rgb(210, 210, 210)',ctxt:'rgb(93, 92, 92)',fbg:'rgb(179, 179, 179)',ftxt:'rgb(38, 38, 38)'},
         dark: {hbg:'rgb(26, 26, 26)',htxt:'rgb(167, 164, 164)',cbg:'rgb(59, 57, 57)',ctxt:'rgb(212, 210, 210)',fbg:'rgb(26, 26, 26)',ftxt:'rgb(167, 164, 164)'},
     } 
+    themeToggler = () =>{
+        this.setState({isLightTheme: !this.state.isLightTheme})
+    } 
+
     render() { 
         return (
-            <ThemeContext.Provider value={{...this.state}}>
+            <ThemeContext.Provider value={{...this.state,themeToggler:this.themeToggler}}>
                 {this.props.children}
             </ThemeContext.Provider>
         );

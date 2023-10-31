@@ -1,27 +1,23 @@
-import React, { Component } from 'react';
+import React, { useContext } from 'react';
 import { ThemeContext } from '../contexts/ThemeContext';
+import { SongContext } from '../contexts/SongContext';
 
-class Home extends Component {
-    render() { 
-        return (
-            <ThemeContext.Consumer>
-                {themeContext=>{
-                    const {isLightTheme,light,dark} = themeContext;
-                    const theme = isLightTheme ? light : dark;
+const Home = () => {
+    const {isLightTheme,light,dark} = useContext(ThemeContext);
+    const theme = isLightTheme ? light : dark;
+    const {songs,setSongs} = useContext(SongContext);
+    return (
+        <div className='content' style={{background: theme.cbg,color: theme.ctxt}}>
+            <h3>Song List</h3>
+            <ul>
+                {songs.map(song=>{
                     return (
-                        <div className='content' style={{background: theme.cbg,color: theme.ctxt}}>
-                            <h3>Song List</h3>
-                            <ul>
-                                <li style={{background: theme.hbg,color: theme.htxt}}>Demo Jemeregn</li>
-                                <li style={{background: theme.hbg,color: theme.htxt}}>ሻማ ቡሬ</li>
-                                <li style={{background: theme.hbg,color: theme.htxt}}>Blinding Light</li>
-                            </ul>
-                    </div>
+                        <li key={song.id} style={{background: theme.hbg,color: theme.htxt}}>{song.title}</li>
                     )
-                }}
-            </ThemeContext.Consumer>
-        );
-    }
+                })}
+            </ul>
+    </div>
+    )
 }
  
 export default Home;

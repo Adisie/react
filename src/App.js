@@ -1,6 +1,8 @@
 import React from 'react';
 
+import AuthContextProvider from './contexts/AuthContext';
 import ThemeContextProvider from './contexts/ThemeContext';
+import SongContextProvider from './contexts/SongContext';
 
 import './index.css';
 
@@ -12,11 +14,15 @@ class App extends React.Component {
     render(){
         return (
             <div className='container'>
-                <ThemeContextProvider>
-                    <Header />
-                    <Home />
-                    <Footer />
-                </ThemeContextProvider>
+                <AuthContextProvider>
+                    <ThemeContextProvider>
+                        <Header />
+                        <SongContextProvider>
+                            <Home />
+                        </SongContextProvider>
+                        <Footer />
+                    </ThemeContextProvider>
+                </AuthContextProvider>
             </div>
         )
     }

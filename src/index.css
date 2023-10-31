@@ -5,10 +5,10 @@
 
 .container {
     width: 650px;
-    height: 75vh;
+    height: 85vh;
     margin: 12px auto;
     display: grid;
-    grid-template-rows: 42px 1fr 36px;
+    grid-template-rows: 64px 1fr 36px;
 }
 
 
@@ -45,6 +45,7 @@ header {
     font-family: 'Times New Roman', Times, serif;
     padding: 3px 12px;
     cursor: pointer;
+    margin-left: 12px;
 }
 
 .content {
